@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:background="@color/main_toolbar"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            app:itemIconSize="20dp"
+            app:itemIconTint="#FFFFFF"
+            app:itemTextColor="#ffffff"
+            app:popupTheme="@style/Theme.TitleBar.PopupOverlay"
+            android:layout_height="?attr/actionBarSize"
+            app:logo="@drawable/youtube_music_logo"
+            app:menu="@menu/top_action_bar_custom" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <FrameLayout
+        android:id="@+id/main_frm"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/main_miniplayer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_miniplayer"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@color/main_background"
+        app:layout_constraintBottom_toTopOf="@id/main_miniplayer_sb">
+
+        <ImageView
+            android:id="@+id/main_miniplayer_iv"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/album_cover1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/main_miniplayer_song_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Out of Time"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/main_miniplayer_iv"
+            app:layout_constraintTop_toTopOf="@id/main_miniplayer_iv" />
+
+        <TextView
+            android:id="@+id/main_miniplayer_song_singer_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="The Weeknd"
+            android:textColor="@color/main_miniplayer_singer"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/main_miniplayer_iv"
+            app:layout_constraintStart_toEndOf="@id/main_miniplayer_iv" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/main_miniplayer_play"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/play_btn"
+                android:padding="20dp"
+                />
+            <ImageView
+                android:id="@+id/main_miniplayer_pause"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:visibility="gone"
+                android:src="@drawable/pause_btn"
+                android:padding="20dp"
+                />
+            <ImageView
+                android:id="@+id/main_miniplayer_next_song"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/forward_btn"
+                android:padding="20dp"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <SeekBar
+        android:id="@+id/main_miniplayer_sb"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ffffff"
+        app:layout_constraintBottom_toTopOf="@id/main_bottom_tab" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/main_bottom_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_background"
+        app:itemIconSize="20dp"
+        app:itemIconTint="#FFFFFF"
+        app:itemTextColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/main_bnv" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
