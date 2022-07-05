@@ -19,7 +19,14 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+
     <style name="Theme.YoutubeMusic.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
     <style name="Theme.TitleBar.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
     <style name="Theme.YoutubeMusic.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+
 </resources>
+

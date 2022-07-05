@@ -12,17 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.YoutubeMusic">
         <activity
-            android:name=".LockerFragment"
-            android:exported="false" />
-        <activity
-            android:name=".LookFragment"
-            android:exported="false" />
-        <activity
-            android:name=".HomeFragment"
-            android:exported="false"
-            android:label="@string/title_activity_home_fragment"
-            android:theme="@style/Theme.YoutubeMusic.NoActionBar" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

@@ -1,8 +1,9 @@
 package com.kmj.youtubemusic
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.kmj.youtubemusic.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
